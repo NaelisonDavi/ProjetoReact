@@ -1,6 +1,8 @@
 import './App.css'
 import SayMyName from './components/SayMyName'
 import Pessoa from './components/Pessoa'
+import Frase from './components/Frase'
+import List from './components/List'
 
 function App() {
   const url = 'https://png.pngtree.com/png-clipart/20220206/original/pngtree-helloboy-png-image_7263636.png'
@@ -14,8 +16,9 @@ function App() {
         nome="Davi Oliveira"
         idade="25"
         profissao="desenvolvedor"
-        foto="https://via.placeholder.com/150"
-      />
+        foto="https://via.placeholder.com/150"/>
+      <Frase />
+      <List />
     </div>
   );
 }
