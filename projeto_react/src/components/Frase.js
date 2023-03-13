@@ -1,4 +1,6 @@
 import styles from './Frase.module.css'
+import React, { Component }  from 'react';
+
 
 function Frase(){
     return  (

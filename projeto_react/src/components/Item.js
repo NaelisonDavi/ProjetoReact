@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types'
+import React, { Component }  from 'react';
+
 
 function Item({habilidade, ano}) {
     return (

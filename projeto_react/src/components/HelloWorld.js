@@ -1,4 +1,6 @@
 import Frase from './Frase'
+import React, { Component }  from 'react';
+
   
 function HelloWorld() {
 

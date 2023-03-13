@@ -1,4 +1,6 @@
 import Item from './Item'
+import React, { Component }  from 'react';
+
 
 function List() {
     return (
