@@ -1,34 +1,25 @@
-import './App.css'
-import SayMyName from './components/SayMyName'
-import Pessoa from './components/Pessoa'
-import Frase from './components/Frase'
-import List from './components/List'
-import React, { Component }  from 'react'
-import Evento from './components/Evento'
-import Form from './components/Form'
-
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import React, {Component} from 'react'
+import Home from './Pages/Home'
+import Empresa from './Pages/Empresa'
+import Contato from './Pages/Contato'
+import Navbar from './components/Layout/Navbar'
+import Footer from './components/Layout/Footer'
 
 
 function App() {
-  const url = 'https://png.pngtree.com/png-clipart/20220206/original/pngtree-helloboy-png-image_7263636.png'
 
   return (
-    <div className="App">
-      <h1>Olá Leitor!</h1>
-      <SayMyName nome="Davi Oliveira" />
-      <img src={url} alt="Imagem olá"/>
-      <Pessoa 
-        nome="Davi Oliveira"
-        idade="25"
-        profissao="desenvolvedor"
-        foto="https://via.placeholder.com/150"/>
-      <Frase />
-      <List />
-      <Evento numero='1' />
-      <Evento numero='2' />
-      <Form />
-    </div>
-  );
+    <Router>
+      <Navbar/>
+      <Routes>
+      <Route exact path="/" element={<Home />} > </Route>
+      <Route path="/empresa" element={<Empresa />} > </Route>
+      <Route path="/contato" element={<Contato />} > </Route>
+      </Routes>
+      <Footer/>
+    </Router>
+  )
 }
 
-export default App;
+export default App
